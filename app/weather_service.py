@@ -31,14 +31,11 @@ def set_geography():
 def get_hourly_forecasts(country_code, zip_code):
     """
     Fetches hourly forecast information from the Weather.gov API, for a given country and zip code.
-
     Params:
         country_code (str) the requested country, like "US"
         zip_code (str) the requested postal code, like "20057"
-
     Example:
         result = get_hourly_forecasts(country_code="US", zip_code="20057")
-
     Returns the forecast info "hourly_forecasts" along with more information about the requested geography ("city_name").
     """
     geocoder = Geocoder(country_code)
@@ -77,7 +74,6 @@ def get_hourly_forecasts(country_code, zip_code):
 def format_temp(temp, temp_unit="F"):
     """
     Displays a temperature to the nearest whole degree, with its temp unit a degrees symbol
-
     Params :
         temp (float or int) temperature
         temp_unit (str) "F" or "C"
@@ -87,9 +83,7 @@ def format_temp(temp, temp_unit="F"):
 def format_hour(dt_str):
     """
     Displays a datetime-looking string as the human friendly hour like "4pm" or "16:00"
-
     Params : dt_str (str) a datetime like "2021-03-29T21:00:00-04:00"
-
     See: https://github.com/prof-rossetti/intro-to-python/blob/master/notes/python/modules/datetime.md
     """
     dt = parse_datetime(dt_str)
